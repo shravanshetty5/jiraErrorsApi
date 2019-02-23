@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js --exec babel-node -e js"
   },
-  "author": "Emmanuel Henri",
-  "license": "ISC",
+  "author": "Shravan SHetty",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",

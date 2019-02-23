@@ -25,10 +25,14 @@ export const getJiraErrors = (req, res) => {
 
 export const getJiraWithId = (req, res) => {
     const query = { jiraId: req.params.jiraId };
-    Jira.find(query, (err, contact) => {
+    Jira.find(query, (err, jira) => {
         if (err) {
             res.send(err);
         }
-        res.json(contact);
+        if (!jira) {
+            var msg = `This JIRA ID:${req.params.jiraId} is not in the database`;
+            res.send(msg);
+        }
+        res.json(jira);
     });
 }
